@@ -1,11 +1,20 @@
 package monster.controller;
 
 import java.util.Scanner;
+import java.util.Scanner;
 
 import monster.model.MarshmallowMonster;
+import monster.view.MonsterDisplay;
 
 public class MonsterController 
 {
+	private MonsterDisplay popup;
+	
+	public MonsterController()
+	{
+		popup = new MonsterDisplay();
+	}
+
 	public void start()
 	{
 		MarshmallowMonster sample = new MarshmallowMonster();
@@ -21,7 +30,12 @@ public class MonsterController
 	}
 	
 	private void interactWithTheMonster(MarshmallowMonster currentMonster)
-	{
+	{	
+		popup.displayText("Hey look at me!");
+		String answer = popup.getResponse("How many meals are you going to eat?");
+		System.out.println(answer);
+		popup.displayText(answer);
+		
 		System.out.println(currentMonster.getName() + " wants to know what to eat next");
 		System.out.println(currentMonster.getName() + " suggests arms they have " + currentMonster.getArmCount());
 		System.out.println("How many do you want to eat?");
@@ -68,6 +82,10 @@ public class MonsterController
 			currentMonster.setTentacleAmount(currentMonster.getTentacleAmount);
 			currentMonster.setTentacleAmount("Thank you very much! I only have this many Tentacles now." +currentMonster.getArmCount);
 		}
+	
+				
+		
+		
 	}
 }
 
