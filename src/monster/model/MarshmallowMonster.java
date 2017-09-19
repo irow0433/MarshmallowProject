@@ -2,12 +2,15 @@ package monster.model;
 
 public class MarshmallowMonster 
 {
+	private static final double String = 0;
 	//Declarat section for the data members
 	private String name;
 	private int eyeCount;
 	private int armCount;
 	private double tentacleAmount;
 	private boolean hasBloop;
+	public String getArmCount;
+	public String getTentacleAmount;
 	
 	public MarshmallowMonster()
 	{
@@ -64,9 +67,9 @@ public class MarshmallowMonster
 		this.armCount = armCount;
 	}
 	
-	public void setTentacleAmount(double tentacleAmount)
+	public void setTentacleAmount(String string)
 	{
-		this.tentacleAmount = tentacleAmount;
+		this.tentacleAmount = String;
 	}
 	
 	public void setBloop(boolean hasBloop)
@@ -81,5 +84,10 @@ public class MarshmallowMonster
 		description += " and my bloop existence is " + hasBloop;
 				
 		return description;
+	}
+
+	public void setTentacleAmount(int i) {
+		// TODO Auto-generated method stub
+		
 	}
 }
