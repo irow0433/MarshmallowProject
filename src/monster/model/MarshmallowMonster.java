@@ -11,6 +11,7 @@ public class MarshmallowMonster
 	private boolean hasBloop;
 	public String getArmCount;
 	public String getTentacleAmount;
+	public Object toString;
 	
 	public MarshmallowMonster()
 	{

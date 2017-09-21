@@ -18,13 +18,18 @@ public class MonsterController
 	public void start()
 	{
 		MarshmallowMonster sample = new MarshmallowMonster();
+//		Systemout.println(sample);
 		System.out.println(sample);
 		MarshmallowMonster realMonster = new MarshmallowMonster("Scary", 8, 2, 3, true);
 		
-		System.out.println(realMonster);
-		System.out.println("Isaac is very hungry, so he will eat one tentacle");
+		//System.out.println(realMonster);
+		popup.displayText(realMonster.toString());
+		//System.out.println("Isaac is very hungry, so he will eat one tentacle");
+		popup.displayText("Isaac is very hungry, so he will eat one tentacle");
 		realMonster.setTentacleAmount(2);
-		System.out.println(realMonster);
+		//System.out.println(realMonster);
+		popup.displayText(realMonster.toString());
+		interactWithTheMonster(realMonster);
 		
 		interactWithTheMonster(realMonster);
 	}
@@ -36,10 +41,17 @@ public class MonsterController
 		System.out.println(answer);
 		popup.displayText(answer);
 		
-		System.out.println(currentMonster.getName() + " wants to know what to eat next");
-		System.out.println(currentMonster.getName() + " suggests arms they have " + currentMonster.getArmCount());
-		System.out.println("How many do you want to eat?");
+		//System.out.println(currentMonster.getName() + " wants to know what to eat next");
+		popup.displayText(currentMonster.getName() + "wants to know what to eat next");		
+		//System.out.println(currentMonster.getName() + " suggests arms they have " + currentMonster.getArmCount());
+		popup.displayText(currentMonster.getName() + "suggests arms they have " + currentMonster);
+		//System.out.println("How many do you want to eat?");
 		Scanner myScanner = new Scanner(System.in);
+		int specialAnswer;
+		String unconverted = popup.getResponse("How many do you want to eat");
+		
+		specialAnswer = Integer.parseInt(unconverted);
+		
 		int consumed = myScanner.nextInt();
 		int difconsumed = myScanner.nextInt();
 		
