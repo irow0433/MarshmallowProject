@@ -92,3 +92,5 @@ public class MarshmallowMonster
 		
 	}
 }
+
+// In MarshamllowMonster gives all of the Monster parts a purpose annd allows them to work

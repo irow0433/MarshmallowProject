@@ -9,3 +9,4 @@ public class MonsterRunner
 	}
 
 }
+// In monster runner it is just a procedure that when you type MonserRunner in the MonsterController  it allows it work and have a purpose

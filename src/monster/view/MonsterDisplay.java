@@ -20,3 +20,5 @@ public class MonsterDisplay
 	}
 	
 }
+
+//In MonsterDisplay there is strings that are attached to there procedures.
